@@ -17,6 +17,23 @@ class Navbar extends Component {
             <Link to="/" className="navbar-brand">
               <img src={Logo} alt="POS Home" />
             </Link>
+            <ul className="nav navbar-nav navbar-left">
+              <li>
+                <Link to="/buildings">Buildings</Link>
+              </li>
+              <li>
+                <Link to="/students">Students</Link>
+              </li>
+              <li>
+                <Link to="/adults">Adults</Link>
+              </li>
+              <li>
+                <Link to="/reports">Reports</Link>
+              </li>
+              <li>
+                <Link to="/accounting">Accounting</Link>
+              </li>
+            </ul>
           </div>
           {this.props.currentUser.isAuthenticated ? (
             <ul className="nav navbar-nav navbar-right">
