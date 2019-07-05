@@ -6,7 +6,7 @@ import AuthForm from "../components/AuthForm";
 import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import withAuth from "../hocs/withAuth";
-import MessageForm from "../containers/MessageForm";
+import Students from "../containers/Students";
 
 const Main = props => {
   const { authUser, errors, removeError, currentUser } = props;
@@ -34,27 +34,7 @@ const Main = props => {
             );
           }}
         />
-        <Route
-          exact
-          path="/signup"
-          render={props => {
-            return (
-              <AuthForm
-                removeError={removeError}
-                errors={errors}
-                onAuth={authUser}
-                signUp
-                buttonText="Sign up"
-                heading="Join today."
-                {...props}
-              />
-            );
-          }}
-        />
-        <Route
-          path="/users/:id/messages/new"
-          component={withAuth(MessageForm)}
-        />
+        <Route path="/students" component={withAuth(Students)} />
       </Switch>
     </div>
   );
