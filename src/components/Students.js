@@ -7,19 +7,19 @@ const Students = ({ currentUser }) => {
       <h1>Welcome to the Students page</h1>
       <ul>
         <li>
-          <Link to="/addStudent">Add Student</Link>
+          <Link to="/studentAdd">Add Student</Link>
         </li>
         <li>
-          <Link to="/modifyStudent">Modify/View Student</Link>
+          <Link to="/studentModify">Modify/View Student Accounts</Link>
         </li>
         <li>
           <Link to="/studentReports">Student Account Reports</Link>
         </li>
         <li>
-          <Link to="/listStudent">List/Print Students</Link>
+          <Link to="/studentList">List/Print Students</Link>
         </li>
         <li>
-          <Link to="/renumberStudent">Renumber Students</Link>
+          <Link to="/studentRenumber">Renumber Students</Link>
         </li>
       </ul>
     </div>

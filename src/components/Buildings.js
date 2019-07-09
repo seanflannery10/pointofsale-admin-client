@@ -7,13 +7,13 @@ const Buildings = ({ currentUser }) => {
       <h1>Welcome to the Buildings page</h1>
       <ul>
         <li>
-          <Link to="/modifyBuildings">Modify/View Buildings</Link>
+          <Link to="/buildingModify">Modify/View Buildings</Link>
         </li>
         <li>
-          <Link to="/modifyMealPrices">Modify/View Meal Prices</Link>
+          <Link to="/buildingModifyMealPrices">Modify/View Meal Prices</Link>
         </li>
         <li>
-          <Link to="/listStudent">List/Print Buildings</Link>
+          <Link to="/buildingList">List/Print Buildings</Link>
         </li>
       </ul>
     </div>
