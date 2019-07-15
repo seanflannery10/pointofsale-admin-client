@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { logout } from "../store/actions/auth";
-import Logo from "../images/pos-logo.png";
 
 class Navbar extends Component {
   logout = event => {
@@ -14,10 +13,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-expand">
         <div className="container-fluid">
           <div className="navbar-header">
-            <Link to="/" className="navbar-brand">
-              <img src={Logo} alt="POS Home" />
-            </Link>
-            <ul className="nav navbar-nav navbar-left">
+            <ul className="nav navbar-nav navbar-right">
               <li>
                 <Link to="/buildings">Buildings</Link>
               </li>
@@ -35,6 +31,7 @@ class Navbar extends Component {
               </li>
             </ul>
           </div>
+          <ul className="nav navbar-nav navbar-right" />
           {this.props.currentUser.isAuthenticated ? (
             <ul className="nav navbar-nav navbar-right">
               <li>
