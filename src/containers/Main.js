@@ -8,6 +8,9 @@ import { removeError } from "../store/actions/errors";
 import withAuth from "../hocs/withAuth";
 import Buildings from "../components/Buildings";
 import Students from "../components/Students";
+import Adults from "../components/Adults";
+import Reports from "../components/Reports";
+import Accounting from "../components/Accounting";
 
 const Main = props => {
   const { authUser, errors, removeError, currentUser } = props;
@@ -37,6 +40,9 @@ const Main = props => {
         />
         <Route path="/buildings" component={withAuth(Buildings)} />
         <Route path="/students" component={withAuth(Students)} />
+        <Route path="/adults" component={withAuth(Adults)} />
+        <Route path="/reports" component={withAuth(Reports)} />
+        <Route path="/accounting" component={withAuth(Accounting)} />
       </Switch>
     </div>
   );
