@@ -12,26 +12,29 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand">
         <div className="container-fluid">
-          <div className="navbar-header">
-            <ul className="nav navbar-nav navbar-right">
-              <li>
-                <Link to="/buildings">Buildings</Link>
-              </li>
-              <li>
-                <Link to="/students">Students</Link>
-              </li>
-              <li>
-                <Link to="/adults">Adults</Link>
-              </li>
-              <li>
-                <Link to="/reports">Reports</Link>
-              </li>
-              <li>
-                <Link to="/accounting">Accounting</Link>
-              </li>
-            </ul>
-          </div>
-          <ul className="nav navbar-nav navbar-right" />
+          {this.props.currentUser.isAuthenticated ? (
+            <div className="navbar-header">
+              <ul className="nav navbar-nav">
+                <li>
+                  <Link to="/buildings">Buildings</Link>
+                </li>
+                <li>
+                  <Link to="/students">Students</Link>
+                </li>
+                <li>
+                  <Link to="/adults">Adults</Link>
+                </li>
+                <li>
+                  <Link to="/reports">Reports</Link>
+                </li>
+                <li>
+                  <Link to="/accounting">Accounting</Link>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <ul className="nav navbar-nav" />
+          )}
           {this.props.currentUser.isAuthenticated ? (
             <ul className="nav navbar-nav navbar-right">
               <li>
