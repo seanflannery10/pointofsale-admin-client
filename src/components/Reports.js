@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Reports = ({ currentUser }) => {
   return (
-    <div className="home-hero">
+    <div className="container">
       <h1>Welcome to the Reports page</h1>
       <ul>
         <li>

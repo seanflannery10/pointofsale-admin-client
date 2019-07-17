@@ -7,6 +7,8 @@ import { authUser } from "../store/actions/auth";
 import { removeError } from "../store/actions/errors";
 import withAuth from "../hocs/withAuth";
 import Buildings from "../components/Buildings";
+import BuildingModify from "../containers/BuildingModify";
+import buildingMealPrices from "../containers/buildingMealPrices";
 import Students from "../components/Students";
 import Adults from "../components/Adults";
 import Reports from "../components/Reports";
@@ -39,6 +41,11 @@ const Main = props => {
           }}
         />
         <Route path="/buildings" component={withAuth(Buildings)} />
+        <Route path="/buildingModify" component={withAuth(BuildingModify)} />
+        <Route
+          path="/buildingMealPrices"
+          component={withAuth(buildingMealPrices)}
+        />
         <Route path="/students" component={withAuth(Students)} />
         <Route path="/adults" component={withAuth(Adults)} />
         <Route path="/reports" component={withAuth(Reports)} />

@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Accounting = ({ currentUser }) => {
   return (
-    <div className="home-hero">
-      <h1>Welcome to the Reports page</h1>
+    <div className="container">
+      <h1>Welcome to the Accounting page</h1>
       <ul>
         <li>
           <Link to="/accountingPrepayment">Enter Prepayment/Refund</Link>
