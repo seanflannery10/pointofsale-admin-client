@@ -3,9 +3,9 @@ import { connect } from "react-redux";
 import { fetchBuildings, removeBuilding } from "../store/actions/buildings";
 import BuildingItem from "../components/BuildingItem";
 
-class MessageList extends Component {
+class BuildingList extends Component {
   componentDidMount() {
-    this.props.fetchMessages();
+    this.props.fetchBuildings();
   }
   render() {
     const { buildings, removeBuilding, currentUser } = this.props;
@@ -41,4 +41,4 @@ function mapStateToProps(state) {
 export default connect(
   mapStateToProps,
   { fetchBuildings, removeBuilding }
-)(MessageList);
+)(BuildingList);
